@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Raleway:ital,wght@0,100..900;1,100..900&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Raleway", sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+
+  /* Custom colors matching the rich Scotch & Diabrowser dark aesthetic */
+  --color-coal-950: #060505;
+  --color-coal-900: #0b0a09;
+  --color-coal-800: #141211;
+  --color-coal-700: #1e1b1a;
+  --color-coal-600: #292423;
+  
+  --color-amber-gold: #ffffff;
+  --color-amber-toast: #a3a3a3;
+  --color-amber-mellow: #e5e5e5;
+}
+
+@layer base {
+  body {
+    background-color: var(--color-coal-950);
+    color: #f5f5f4;
+    font-family: var(--font-sans);
+    overflow-x: hidden;
+  }
+
+  /* Ensure headings and .font-display elements consistently use Raleway and have a weight of 600 */
+  h1, h2, h3, h4, h5, h6, .font-display, [class*="font-display"] {
+    font-family: var(--font-display) !important;
+    font-weight: 600 !important;
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: var(--color-coal-950);
+  }
+  ::-webkit-scrollbar-thumb {
+    background: var(--color-coal-700);
+    border-radius: 10px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--color-coal-600);
+  }
+}
+
+.bg-mesh-subtle {
+  background-image: 
+    radial-gradient(ellipse at 50% 50%, rgba(11, 10, 9, 0.6) 0%, #060505 100%),
+    url('../assets/bg-section.webp');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.bg-mesh-vision {
+  background-image: url('../assets/bg-section2.webp');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.bg-hero-main {
+  background-image: url('../assets/bg-hero.webp');
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
+}
+
+.bg-section {
+  background-image: url('../assets/bg-section.webp');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+
