@@ -270,11 +270,12 @@ export default function App() {
                     onChange={(e) => setRole(e.target.value)}
                     className="w-full bg-[#060505]/80 border border-coal-700/60 rounded-xl py-3 px-3.5 text-sm text-stone-300 focus:outline-none focus:border-stone-400 font-display tracking-wide"
                   >
-                    <option value="Developer">Lead Developer / Architect</option>
+                    <option value="Developer">Developer / Architect</option>
                     <option value="CTO">CTO / Executive Leader</option>
                     <option value="Manager">Product / Engineering Manager</option>
+                    <option value="Devops">DevOps Engineer</option>
                     <option value="Researcher">AI Researcher / Data Scientist</option>
-                    <option value="Other">Autonomous AI Hobbyist</option>
+                    <option value="Other">Others</option>
                   </select>
                 </div>
               </div>
